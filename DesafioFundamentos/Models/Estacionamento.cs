@@ -14,8 +14,7 @@ namespace DesafioFundamentos.Models
 
         public void AdicionarVeiculo()
         {
-            // TODO: Pedir para o usuário digitar uma matricula (ReadLine) e adicionar na lista "veiculos"
-            // *IMPLEMENTE AQUI*
+            // Implementado
             string matricula = "";
             do
             {
@@ -37,12 +36,11 @@ namespace DesafioFundamentos.Models
 
         public void RemoverVeiculo()
         {
-            if (veiculos.Any())
+            if (veiculos.Any()) //verificar se a lista esta vazia
             {
                 Console.WriteLine("Digite a matricula do veículo para remover:");
 
-                // Pedir para o usuário digitar a matricula e armazenar na variável matricula
-                // *IMPLEMENTE AQUI*
+                // Implementado
                 string matricula = Console.ReadLine().ToLower();
 
                 // Verifica se o veículo existe
@@ -50,14 +48,11 @@ namespace DesafioFundamentos.Models
                 {
                     Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
 
-                    // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
-                    // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
-                    // *IMPLEMENTE AQUI*
+                    // Implementado
                     int horas = int.Parse(Console.ReadLine());
                     decimal valorTotal = precoInicial + precoPorHora * horas;
 
-                    // TODO: Remover a matricula digitada da lista de veículos
-                    // *IMPLEMENTE AQUI*
+                    // implementado git s
                     veiculos.RemoveAt(veiculos.FindIndex(x => x.ToLower() == matricula));
 
                     Console.WriteLine("O veículo '{0}' foi removido e o preço total foi de: MZN {1:N}", matricula, valorTotal);
@@ -79,8 +74,8 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+
+                // implementado utilizando o Stream
                 veiculos.ForEach(veiculo => Console.WriteLine(veiculo));
             }
             else
